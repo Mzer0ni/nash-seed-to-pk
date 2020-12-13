@@ -1,0 +1,24 @@
+$container-max-widths: (
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) ;
+
+$enable-rounded: false;
+
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-monospace !default;
+
+.alert{
+  line-height: 195%;
+}
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+@include media-breakpoint-down(md) {
+  .w-sm-100{
+    width: 100%;
+  }
+}

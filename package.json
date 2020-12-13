@@ -1,0 +1,57 @@
+{
+  "name": "nash-seed-to-pk",
+  "version": "0.0.1",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Mzer0ni@github.com/Mzer0ni/nash-seed-to-pk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mzer0ni/nash-seed-to-pk/issues"
+  },
+  "homepage": "https://github.com/Mzer0ni/nash-seed-to-pk#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "autoprefixer": "^10.0.2",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "glob": "^7.1.6",
+    "html-inline-css-webpack-plugin": "^1.9.1",
+    "html-inline-script-webpack-plugin": "^1.0.0",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.1",
+    "node-sass": "^5.0.0",
+    "path": "^0.12.7",
+    "postcss": "^8.1.9",
+    "postcss-loader": "^4.1.0",
+    "purgecss-webpack-plugin": "^3.0.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.7.0"
+  },
+  "dependencies": {
+    "@neon-exchange/nash-protocol": "3.3.14",
+    "assert": "^2.0.0",
+    "bootstrap": "5.0.0-alpha3",
+    "buffer": "^6.0.2",
+    "crypto-browserify": "^3.12.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "wif": "^2.0.6"
+  }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Nash seed phrase to private key</title>
+   </head>
+   <body class="bg-light">
+      <div class="container">
+         <main>
+            <div class="row">
+               <div class="col">
+                  <div class="alert alert-secondary p-4 p-md-5 mt-4 mb-4 small">
+                     <div class="alert-heading">
+                        <h4>Nash seed words to private keys</h4>
+                        <hr>
+                     </div>
+                     <p>For <strong>demonstration- and emergency use only</strong>. This tool is passing your seed
+                        phrase through the same wallet-creation-steps, used by <a
+                           href="https://github.com/nash-io/nash-protocol" rel="noopener noreferrer">Nash Protocol</a> during your account setup, and <strong>spits out the
+                        unencrypted keys</strong>. Everybody with your private key has <strong>unrestricted
+                        access to your wallets</strong>. Be vigilant while using with live wallets.
+                     </p>
+                     <hr>
+                     <a class="btn btn btn-outline-dark mb-3 mb-lg-0 w-sm-100"
+                        href="https://github.com/Mzer0ni/nash-seed-to-pk" rel="noopener noreferrer">Github Source</a>
+                     <a href="https://github.com/Mzer0ni/nash-seed-to-pk/releases/" class="mb-3 mb-lg-0 mr-1 btn btn btn-outline-success w-sm-100" rel="noopener noreferrer">Download <b>offline web page</b> from Github</a>
+                     <span class="text-secondary">
+                     v<%= htmlWebpackPlugin.options.version %> ~ Nash Protocol
+                     v<%= htmlWebpackPlugin.options.nash_protocol_version %>
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="row mb-5">
+               <div class="col-md-12 col-lg-4 mb-3">
+                  <div class="card">
+                     <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-between">
+                           Seed words
+                        </div>
+                     </div>
+                     <div class="card-body">
+                        <form action="javascript:void(0);" autocomplete="off" id="input-words">
+                           <div class="row">
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" name="word_1" id="word_1"
+                                       placeholder="1.">
+                                    <label for="word_1">1.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_2" name="word_2"
+                                       placeholder="2.">
+                                    <label for="word_2">2.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_3" name="word_3"
+                                       placeholder="3.">
+                                    <label for="word_3">3.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_4" name="word_4"
+                                       placeholder="4.">
+                                    <label for="word_4">4.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_5" name="word_5"
+                                       placeholder="5.">
+                                    <label for="word_5">5.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_6" name="word_6"
+                                       placeholder="6.">
+                                    <label for="word_6">6.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_7" name="word_7"
+                                       placeholder="7.">
+                                    <label for="word_7">7.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_8" name="word_8"
+                                       placeholder="8.">
+                                    <label for="word_8">8.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_9" name="word_9"
+                                       placeholder="9.">
+                                    <label for="word_9">9.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_10" name="word_10"
+                                       placeholder="10.">
+                                    <label for="word_10">10.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_11" name="word_11"
+                                       placeholder="11.">
+                                    <label for="word_11">11.</label>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="word_12" name="word_12"
+                                       placeholder="12.">
+                                    <label for="word_12">12.</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <button type="submit" class="w-100 btn btn-lg btn-dark mt-2">Derive keys</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 col-lg-8">
+                  <div class="card">
+                     <div class="card-header">
+                        Ledger keys
+                     </div>
+                     <div class="card-body">
+                        <div class="row">
+                           <div class="col">
+                              <div class="col-3"></div>
+                              <div class="col-9"></div>
+                           </div>
+                        </div>
+                        <div class="results">
+                           <div class="d-flex justify-content-between mb-3 border-bottom">
+                              <div class="p-4 p-lg-5 mr-1">BTC</div>
+                              <div class="p-3 flex-fill">
+                                 <div class="address">
+                                    <div class="form-floating mb-3">
+                                       <input type="text" class="form-control" id="public_address_BTC" value=""
+                                          placeholder="Public address" readonly>
+                                       <label>Public address</label>
+                                    </div>
+                                 </div>
+                                 <!-- Bitcoin private key is hidden because WIF format is more relevant -->
+                                 <div class="private d-none">
+                                    <div class="form-floating mb-3">
+                                       <input type="text" class="form-control" id="private_key_BTC" value=""
+                                          placeholder="Private key" readonly>
+                                       <label>Private key</label>
+                                    </div>
+                                 </div>
+                                 <div class="private_wif">
+                                    <div class="form-floating mb-3">
+                                       <input type="text" class="form-control" id="private_key_BTC_WIF"
+                                          value="" placeholder="Private key" readonly>
+                                       <label>Private key</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex justify-content-between mb-3 border-bottom">
+                              <div class="p-4 p-lg-5 mr-1">ETH</div>
+                              <div class="p-3 flex-fill">
+                                 <div class="address">
+                                    <div class="form-floating mb-3">
+                                       <input type="text" class="form-control" id="public_address_ETH" value=""
+                                          placeholder="Public address" readonly>
+                                       <label>Public address</label>
+                                    </div>
+                                 </div>
+                                 <div class="private">
+                                    <div class="form-floating mb-3">
+                                       <input type="text" class="form-control" id="private_key_ETH" value=""
+                                          placeholder="Private key" readonly>
+                                       <label>Private key</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex justify-content-between mb-1">
+                              <div class="p-4 p-lg-5 mr-1">NEO</div>
+                              <div class="p-3 flex-fill">
+                                 <div class="address">
+                                    <div class="form-floating mb-3">
+                                       <input type="text" class="form-control" id="public_address_NEO" value=""
+                                          placeholder="Public address" readonly>
+                                       <label>Public address</label>
+                                    </div>
+                                 </div>
+                                 <div class="private">
+                                    <div class="form-floating mb-3">
+                                       <input type="text" class="form-control" id="private_key_NEO" value=""
+                                          placeholder="Private key" readonly>
+                                       <label>Private key</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+         <!-- SROLL TO HIDE MAIN-->
+         <section class="d-flex vh-100">
+            <p class="align-self-center w-100 text-center mb-5 p-3">This page intentionally left blank</p>
+         </section>
+      </div>
+   </body>
+</html>
